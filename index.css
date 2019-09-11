@@ -1,0 +1,88 @@
+button {
+    font-size: 1.4em;
+    font-weight: bold;
+    padding: 10px 30px;
+}
+.nav_area{
+  position:absolute;
+  top: 10px;
+  left: 20px;
+}
+.start_button{
+}
+
+body {
+  background: black;
+  margin: 0 auto;
+  max-width: 56em;
+  padding: 1em 0;
+}
+.slot {
+  position: absolute;
+  width: 89px;
+  height: 100%;
+/*
+  animation-duration: 6s;  
+  animation-timing-function: linear;
+  animation-name: fadeIn;
+*/
+}
+.s{
+  background: white;
+  z-index:10;
+}
+.n{
+  opacity: 0;
+  background: black;
+}
+.slot_container{
+  position:absolute;
+}
+.slot1{ margin-left: 1px; }
+.slot2{ margin-left: 90px; }
+.slot3{ margin-left: 180px; }
+.slot4{ margin-left: 269px; }
+.slot5{ margin-left: 359px; }
+.slot6{ margin-left: 448px; }
+.slot7{ margin-left: 538px; }
+.slot8{ margin-left: 627px; }
+.slot9{ margin-left: 717px; }
+.slot10{ margin-left: 806px; }
+.grid-container{
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+  grid-template-rows: 50px 50px;
+}
+.grid {
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+  grid-gap: 1px;
+  background: white;
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto auto auto auto;
+}
+ 
+.footer{
+	z-index:99;
+}
+.grid-item {
+  background: black;
+  height: 500px;
+}
+ 
+/* Demo Specific Styles */
+.bar{
+  z-index:5;
+  width: 100%;
+  height: 10px;
+  background: red;
+}
+@keyframes fadeIn {
+    from {
+        top:0px;
+    }
+    to {
+    	top:1200px;
+    }
+}
+
