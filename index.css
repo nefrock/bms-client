@@ -50,10 +50,9 @@ body {
 .slot10{ margin-left: 806px; }
 .grid-container{
   display: grid;
-  grid-template-columns: 100px 100px 100px;
-  grid-template-rows: 50px 50px;
 }
 .grid {
+  grid-template-columns:100px;
   border-left: 1px solid white;
   border-right: 1px solid white;
   grid-gap: 1px;
@@ -68,6 +67,32 @@ body {
 .grid-item {
   background: black;
   height: 500px;
+}
+.box{
+  width: 10px;
+  height: 10px;
+  border: solid black 1px;
+  float: left;
+}
+.ybox{
+  background: orange;
+}
+.wbox{
+  background: white;
+}
+.rbox{
+  background: red;
+  width: 58px;
+}
+.box-grid{
+  margin-top: 10px;
+  background: black;
+  border: black;
+  justify-items: center;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+.box-container{
+  float: left;
 }
  
 /* Demo Specific Styles */
