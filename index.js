@@ -28,8 +28,6 @@ function createLedBox(code){
   arr.push(code & 0b000010 ? "y": "w");
   arr.push(code & 0b000001 ? "y": "w");
   arr.push(code & 0b100000 ? "r": "");
-  console.log(code)
-  console.log(arr)
   let appended_dom =$("<div></div>");
   for(let i = 0; i < arr.length; i++){
     appended_dom.append(`<div class="box ${arr[i]}box"></div>`);
@@ -38,7 +36,6 @@ function createLedBox(code){
 }
 function createDom(music_name){
   const music = musics[music_name];
-  console.log(music);
   const num_code = Object.keys(music).length;
   const music_length = getMusicLength(music);
   $('.slot').empty();
@@ -50,9 +47,6 @@ function createDom(music_name){
     let led_dom = createLedBox(led_code);
     $(".box-container"+code_index).empty();
     $(".box-container"+code_index).append(led_dom);
-    console.log(code)
-    console.log(".box-container"+code_index)
-    console.log(led_dom)
 
     for(let i = 1; i < music[code].length; i++){
       let appended_dom =$("<div></div>");
@@ -69,12 +63,8 @@ function createDom(music_name){
     code_index++;
   }
   let slot_container_dom = $('.slot_container');
-  console.log(slot_container_dom);
-  console.log(music_length);
-  console.log("-" + BASE_DURATION_HEIGHT * music_length + "px");
-  slot_container_dom.css({'margin-top' : "-" + BASE_DURATION_HEIGHT * music_length + "px"});
+  slot_container_dom.css({'margin-top' : "-" + (BASE_DURATION_HEIGHT * music_length + 16) + "px"});
 	defineKeyFrame(music_name, music_length);
-	playKeyFrame(music_name, music_length);
 }
 function defineKeyFrame(name, duration){
   $.keyframe.define({
@@ -112,12 +102,20 @@ function getMusicLength(music){
 }
 
 $(document).ready(function(){
+  let createDomWrapper = function() {
+		const music_name = $(".selected_music").val();
+  	createDom(music_name);
+  };
   for( let music_name in musics){
     $(".selected_music").append(`<option value="${music_name}"> ${music_name} </option>`);
   }
+  $( ".selected_music" ).change(createDomWrapper);
 
 	$(".start_button").click(function(){
-		let music_name = $(".selected_music").val();
-  	createDom(music_name);
+		const music_name = $(".selected_music").val();
+    const music = musics[music_name];
+    const music_length = getMusicLength(music);
+	  playKeyFrame(music_name, music_length);
 	})
+  createDomWrapper();
 });
