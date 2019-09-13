@@ -19,7 +19,7 @@ body {
 }
 .slot {
   position: absolute;
-  width: 89px;
+  width: 74px;
   height: 100%;
 /*
   animation-duration: 6s;  
@@ -39,15 +39,17 @@ body {
   position:absolute;
 }
 .slot1{ margin-left: 1px; }
-.slot2{ margin-left: 90px; }
-.slot3{ margin-left: 180px; }
-.slot4{ margin-left: 269px; }
-.slot5{ margin-left: 359px; }
-.slot6{ margin-left: 448px; }
-.slot7{ margin-left: 538px; }
-.slot8{ margin-left: 627px; }
-.slot9{ margin-left: 717px; }
-.slot10{ margin-left: 806px; }
+.slot2{ margin-left: 75px; }
+.slot3{ margin-left: 150px; }
+.slot4{ margin-left: 225px; }
+.slot5{ margin-left: 300px; }
+.slot6{ margin-left: 375px; }
+.slot7{ margin-left: 448px; }
+.slot8{ margin-left: 523px; }
+.slot9{ margin-left: 600px; }
+.slot10{ margin-left: 675px; }
+.slot11{ margin-left: 750px; }
+.slot12{ margin-left: 821px; }
 .grid-container{
   display: grid;
 }
@@ -58,7 +60,7 @@ body {
   grid-gap: 1px;
   background: white;
   display: grid;
-  grid-template-columns: auto auto auto auto auto auto auto auto auto auto;
+  grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto;
 }
  
 .footer{
@@ -89,7 +91,7 @@ body {
   background: black;
   border: black;
   justify-items: center;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 .box-container{
   float: left;
